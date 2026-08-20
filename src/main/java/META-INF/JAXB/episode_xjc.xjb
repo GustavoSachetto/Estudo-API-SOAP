@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este arquivo foi gerado pela Eclipse Implementation of JAXB, v3.0.0 
+Consulte https://eclipse-ee4j.github.io/jaxb-ri 
+Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+Gerado em: 2026.08.19 às 10:41:01 PM BRT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://gsachetto.com/soap/entity/carro">
+    <schemaBindings map="false">
+      <package name="com.gsachetto.soap.entity.carro"/>
+    </schemaBindings>
+    <bindings scd="tns:getCarroRequest">
+      <class ref="com.gsachetto.soap.entity.carro.GetCarroRequest"/>
+    </bindings>
+    <bindings scd="tns:getCarroResponse">
+      <class ref="com.gsachetto.soap.entity.carro.GetCarroResponse"/>
+    </bindings>
+    <bindings scd="~tns:carro">
+      <class ref="com.gsachetto.soap.entity.carro.Carro"/>
+    </bindings>
+    <bindings scd="~tns:carroceria">
+      <typesafeEnumClass ref="com.gsachetto.soap.entity.carro.Carroceria"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://gsachetto.com/soap/entity/pessoa">
+    <schemaBindings map="false">
+      <package name="com.gsachetto.soap.entity.pessoa"/>
+    </schemaBindings>
+    <bindings scd="tns:getPessoaRequest">
+      <class ref="com.gsachetto.soap.entity.pessoa.GetPessoaRequest"/>
+    </bindings>
+    <bindings scd="tns:getPessoaResponse">
+      <class ref="com.gsachetto.soap.entity.pessoa.GetPessoaResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

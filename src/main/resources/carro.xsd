@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://gsachetto.com/soap/entity/carro"
+           targetNamespace="http://gsachetto.com/soap/entity/carro"
+           elementFormDefault="qualified">
+    
+   <xs:simpleType name="carroceria">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SEDAN" />
+            <xs:enumeration value="HATCH" />
+            <xs:enumeration value="SUV" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="carro">
+        <xs:sequence>
+            <xs:element name="marca" type="xs:string"/>
+            <xs:element name="modelo" type="xs:string"/>
+            <xs:element name="carroceria" type="tns:carroceria"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="getCarroRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="carroceria" type="tns:carroceria"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCarroResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="carro" type="tns:carro" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
